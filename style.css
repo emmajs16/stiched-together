@@ -30,6 +30,7 @@ h1,h2,h3,h4,h5,h6{
 	position: fixed;
 }
 .logo{
+	font-family: 'Nixie One', cursive;
 	text-align: center;
 	background-image: url("images/paint.png");
 	background-position: center;
@@ -73,6 +74,7 @@ margin: -20px;
 	height: 30%;
 	margin-bottom: 5%;
 	background:#B7B7A4;
+	padding: 5%;
 }
 .profile-header {
 	background-color: #B7B7A4;
@@ -324,10 +326,12 @@ margin: -20px;
   padding: 20px;
 }
 .heading{
-  background-image: url('images/finalthread.jpeg');
+  background-image: linear-gradient(black, black),url('images/finalthread.jpeg');
   background-repeat: no-repeat;
   background-attachment: fixed;
+	 background-blend-mode: saturation;
   background-size: cover;
+	box-shadow: 0 0 8px 8px white inset;
   height: 610px;
 } 
 .st{
