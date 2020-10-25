@@ -303,6 +303,8 @@ margin: -20px;
   padding: 20px;
   text-align: center;
   width: 400px;
+  margin-right: 25pt;
+  margin-left: 55pt;
 
 }
 .resourceContent2{
@@ -310,6 +312,8 @@ margin: -20px;
   padding: 20px;
   text-align: center;
   width: 400px;
+  margin-right: 25pt;
+  margin-left: 25pt;
 
 }
 .support{
@@ -319,4 +323,14 @@ margin: -20px;
   font-family: "Montserrat";
   padding: 20px;
 }
-
+.heading{
+  background-image: url('images/finalthread.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 610px;
+} 
+.st{
+  font-family: 'Montserrat';
+  font-size: 20pt;
+}

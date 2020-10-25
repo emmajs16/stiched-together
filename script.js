@@ -177,3 +177,14 @@ function celebrate(){
 	var dot = document.getElementById("Cdot");
 	dot.classList.add('finished');
 }
+
+// parallax?
+// object-fit polyfill run
+objectFitImages();
+
+/* init Jarallax */
+jarallax(document.querySelectorAll('.jarallax'));
+
+jarallax(document.querySelectorAll('.jarallax-keep-img'), {
+    keepImg: true,
+});
