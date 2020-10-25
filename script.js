@@ -36,14 +36,14 @@ function receive() {
     setTimeout(function() {
        localMessages.forEach(function(post){
 				 var newPost = document.createElement('div')
-				 newPost.innerHTML =`<h3>${post[0]}</h3><p>${post[1]}</p>` 
+				 newPost.innerHTML =`<h3>${post[0]}</h3><hr><p>${post[1]}</p>` 
 				 newPost.setAttribute("class", "post");
 				 console.log(newPost)
 				 document.getElementById("localPost").appendChild(newPost)
 			 })
 			  globalMessages.forEach(function(post){
 				 var newPost = document.createElement('div')
-				 newPost.innerHTML =`<h3>${post[0]}</h3><p>${post[1]}</p>` 
+				 newPost.innerHTML =`<h3>${post[0]}</h3><hr><p>${post[1]}</p>` 
 				 newPost.setAttribute("class", "post");
 				 console.log(newPost)
 				 document.getElementById("globalPost").appendChild(newPost)
