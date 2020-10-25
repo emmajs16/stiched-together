@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="jquery-3.5.1.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+
+  <link href="index.html"/>
+  <link href="progressTracker.html"/>
+  <link href="resources.html"/>
+  <link href="profile.html"/>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+	 crossorigin="anonymous">
+</head>
+
+<body>
+	<!-- Vertical navbar -->
+
+	<div class="vertical-nav" id="sidebar">
+		<div class="py-4 px-3 mb-4 logo-bar">
+			<div class="logo">
+				<h1>stitched together</h1>
+			</div>
+			<img src="images/thread.png" alt="thread">
+  </div>
+
+  <ul class="nav flex-column bg-white mb-0">
+    <li class="nav-item">
+      <a href="index.html" class="nav-link">
+                <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                Home
+            </a>
+    </li>
+    <li class="nav-item">
+      <a href="progressTracker.html" class="nav-link">
+                <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                Progress Tracker
+            </a>
+    </li>
+    <li class="nav-item">
+      <a href="resources.html" class="nav-link">
+                <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                Resources
+            </a>
+    </li>
+    <li class="nav-item">
+      <a href="connect.html" class="nav-link">
+                <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                Connect
+            </a>
+    </li>
+
+   <li class="nav-item">
+      <a href="profile.html" class="nav-link">
+                <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                Profile
+            </a>
+    </li>
+
+  </ul>
+
+	<!-- <div class = "login">
+<div id="firebaseui-auth-container"></div>
+<div id="loader">Loading...</div>
+</div>-->
+</div> 
+<!-- End vertical navbar -->
+<div class="page-content p-5" id="content">
+    <div class="page-header">
+        
+    </div>
+    <ul class="timeline">
+        <li class="timeline">
+          <div class="timeline-badge" id ="MRdot"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">conduct market research</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Market research includes gathering information about consumers' needs and preferences to start forming your business plan. Some things to consider include your demand, location, and economic indicators. </p>
+            </div>
+						<button class= "btn btn-dark btn-sm" id ="marketResearch" onclick="marketResearch()">done</button>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge" id ="BPdot"><i class="glyphicon"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">write your business plan</h4>
+            </div>
+            <div class="timeline-body">
+              <p>This business plan is a document that establishes your company's goals and ambitions as well as the strategies needed to implement them. Two possible formats for these plans are the traditional plan and the lean startup plan. </p>
+            </div>
+						<button class= "btn btn-dark btn-sm" id ="businessPlan" onclick="businessPlan()">done</button>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge" id = "FBdot"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">fund your business</h4>
+            </div>
+            <div class="timeline-body">
+              <p>This financing process is essential to establish the money needed for your business to start. Possible sources of funding include self-funding, crowdfunding, investors, grants, and loans.</p>
+            </div>
+						<button class= "btn btn-dark btn-sm" id ="fundBusiness" onclick="fundBusiness()">done</button>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+					<div class="timeline-badge" id = "BLdot"><i class="glyphicon glyphicon-floppy-disk"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">pick your business location</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Throughout picking your business location,  you can decided what location and type of facility would be best for your personal business, whether that is online or a physical space. When choosing a location, it is important to consider state and local taxes as well as zoning ordinances.</p>
+            </div>
+						<button class= "btn btn-dark btn-sm" id ="businessLocation" onclick="businessLocation()">done</button>
+          </div>
+        </li>
+        <li class="timeline">
+          <div class="timeline-badge" id = "BSdot"><i class="glyphicon glyphicon-floppy-disk"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">choose your business structure</h4>
+            </div>
+            <div class="timeline-body">
+              <p>The business structure is a form of legal organization for your business that determines key aspects such as taxes, liability, and paperwork. This step is essential before officially registering your business. Some common business structures include sole proprietorships, partnerships, and limited liability companies. </p>
+              <hr>
+            </div>
+						<button class= "btn btn-dark btn-sm" id ="businessStructure" onclick="businessStructure()">done</button>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge" id ="BNdot"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">choose your business name</h4>
+            </div>
+            <div class="timeline-body">
+              <p>By choosing a name for your business, you are establishing a brand. This name can reflect the company's values, priorities, and mission. Through this process, make sure that this name is not already assigned to a current business.</p>
+            </div>
+						<button class= "btn btn-dark btn-sm" id ="businessName" onclick="businessName()">done</button>
+          </div>
+        </li>
+				<li class="timeline">
+          <div class="timeline-badge" id = "RBdot"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">register your business</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Registering your business establishes legal rights for your business. This registration process depends on the business structure of your company as well as the location. In some cases, you might not need to register your business depending on the circumstances.</p>
+            </div>
+						<button class= "btn btn-dark btn-sm" id ="registerBusiness" onclick="registerBusiness()">done</button>
+          </div>
+        </li>
+				<li class="timeline-inverted">
+          <div class="timeline-badge" id = "TIdot"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">get federal and state tax IDs</h4>
+            </div>
+            <div class="timeline-body">
+              <p>By accessing your Employer Identification Number, you will be able to pay both federal and state taxes. This process is free to apply, but must be done after registering your business. </p>
+            </div>
+						<button class= "btn btn-dark btn-sm" id ="taxId" onclick="taxId()">done</button>
+          </div>
+        </li>
+				<li class="timeline">
+          <div class="timeline-badge" id = "ALdot"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">apply for licenses and permits</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Acuquiring the proper licenses and permits are essential for maintaining the legality of your business. These licenses and permits may depend on your location and business activity. </p>
+            </div>
+						<button class= "btn btn-dark btn-sm" id ="applyLicenses" onclick="applyLicenses()">done</button>
+          </div>
+        </li>
+				<li class="timeline-inverted">
+          <div class="timeline-badge" id = "OBdot"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">open a business bank account</h4>
+            </div>
+            <div class="timeline-body">
+              <p> A business bank account helps you stay legally compliant and protected. It also provides benefits to your customers and employees. Common business accounts include a checking account, savings account, credit card account, and a merchant services account. Once you have selected a bank, simply visit the branch or go online to discover your next steps.</p>
+            </div>
+						<button class= "btn btn-dark btn-sm" id ="openBank" onclick="openBank()">done</button>
+          </div>
+        </li>
+				<li class="timeline">
+          <div class="timeline-badge success" id = "Cdot"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">celebrate opening your business</h4>
+            </div>
+            <div class="timeline-body">
+              <p>You have made it to the your opening! Celebrate your sucesses this far, but continue to work hard and connect with your community of small business leaders. This is only the beginning of your journey!</p>
+            </div>
+						<button class= "btn btn-dark btn-sm" id ="celebrate" onclick="celebrate()">done</button>
+          </div>
+        </li>
+    </ul>
+</div>
+		
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
